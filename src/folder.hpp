@@ -5,4 +5,4 @@
 
 std::filesystem::path FindMusicFolder(const char* argv0);
 int GetMusicCount(const std::filesystem::path& MusicFolder);
-std::string GetMusic(const std::filesystem::path& MusicFolder, int Index);
+std::filesystem::path GetMusic(const std::filesystem::path& MusicFolder, int Index);
