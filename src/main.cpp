@@ -6,13 +6,13 @@
 #include <locale>
 #include <filesystem>
 
-int main() {
+int main(int argc, char* argv[]) {
     std::setlocale(LC_ALL, "");
     rng::Init();
 
-    std::filesystem::path MusicFolder("music");
-    if (!std::filesystem::is_directory(MusicFolder)) {
-        std::cerr << "Directory " << MusicFolder << "does not exist!\n";
+    auto MusicFolder = FindMusicFolder(argv[0]);
+    if (MusicFolder.empty()) {
+        std::cerr << "Cannot find music directory\n";
         return -1;
     }
     int MusicCount = GetMusicCount(MusicFolder);

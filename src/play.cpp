@@ -91,7 +91,7 @@ bool PlayMP3(const std::filesystem::path& path) {
         return false;
     }
 
-    std::wcout << path << std::endl;
+    std::wcout << path.filename() << std::endl;
 
     // Wait for playback to finish
     {
