@@ -32,16 +32,11 @@ The executable will be created in the build directory.
 
 ## Usage
 
-1. Create a `music` folder in one of these locations:
-   - Same directory as the executable
-   - One level up from the executable (e.g., if exe is in `build/`, put music in project root)
+1. Create a `music` folder in the project root directory (The program will automatically find the `music` folder by searching upward from the executable location.)
 
 2. Add your MP3 files to the `music` folder
 
-3. Run the executable:
-   ```bash
-   ./AutoPlayMusic
-   ```
+3. Run the executable from anywhere in the project
 
 The program will:
 - List all MP3 files it found
